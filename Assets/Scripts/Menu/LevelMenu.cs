@@ -1,17 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class LevelMenu : MonoBehaviour
+public class LevelMenu : Menu
 {
     private void Start()
     {
+        Finish.PlayerDetected.AddListener(GoToNextLevel);
         DeathZone.PlayerDetected.AddListener(RestartLevel);
+    }
+
+    private void GoToNextLevel()
+    {
+        _currentLevelIndex += 1;
+        if (_currentLevelIndex >= _levels.Names.Count) _currentLevelIndex = 0;
+
+        OpenScene(_levels.Names[_currentLevelIndex]);
     }
 
     private void RestartLevel ()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        OpenScene(_levels.Names[_currentLevelIndex]);
     }    
 }
