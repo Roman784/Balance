@@ -5,6 +5,9 @@ using UnityEngine;
 public class FollowingCamera : MonoBehaviour
 {
     [SerializeField] private Transform _target;
+    [SerializeField] private Vector3 _offset;
+
+    [Space]
 
     [SerializeField] private float _followingSpeed;
     [SerializeField] private float _height;
@@ -25,7 +28,7 @@ public class FollowingCamera : MonoBehaviour
 
     private void Move()
     {
-        _currentVector = new Vector3(_target.position.x, _target.position.y + _height, _target.position.z - _rearDistance);
+        _currentVector = new Vector3(_target.position.x, _target.position.y + _height, _target.position.z - _rearDistance) + _offset;
         transform.position = Vector3.Lerp(transform.position, _currentVector, _followingSpeed * Time.fixedDeltaTime);
     }
 }
