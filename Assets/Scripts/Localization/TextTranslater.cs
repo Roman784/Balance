@@ -11,13 +11,11 @@ public class TextTranslater : MonoBehaviour
 
     private TMP_Text _text;
 
-    private void Start()
+    private void Awake()
     {
         _text = GetComponent<TMP_Text>();
 
         Language.LanguageChanged.AddListener(UpdateText);
-
-        UpdateText();
     }
 
     private void UpdateText() => _text.text = Language.Instance.CurrentLanguage == Languages.Ru ? _ru : _en;

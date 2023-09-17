@@ -16,10 +16,7 @@ public class SoundAndMusic : MonoBehaviour
     {
         if (Instance != null && Instance != this) Destroy(gameObject);
         Instance = this;
-    }
 
-    private void Start()
-    {
         Repository.DataLoaded.AddListener(LoadData);
     }
 
@@ -34,14 +31,16 @@ public class SoundAndMusic : MonoBehaviour
     public void ChangeSound()
     {
         SoundVolume = SoundVolume > 0f ? 0f : 1f;
-
         SoundOrMusicChanged.Invoke();
+
+        Repository.Instance.SetSoundVolume(SoundVolume);
     }
 
     public void ChangeMusic()
     {
         MusciVolume = MusciVolume > 0f ? 0f : 1f;
-
         SoundOrMusicChanged.Invoke();
+
+        Repository.Instance.SetMusicVolume(MusciVolume);
     }    
 }

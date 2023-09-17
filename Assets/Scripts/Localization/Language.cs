@@ -17,10 +17,7 @@ public class Language : MonoBehaviour
     {
         if (Instance != null && Instance != this) Destroy(gameObject);
         Instance = this;
-    }
 
-    private void Start()
-    {
         Repository.DataLoaded.AddListener(LoadData);
     }
 
@@ -34,8 +31,9 @@ public class Language : MonoBehaviour
     public void ChangeLanguage()
     {
         CurrentLanguage = CurrentLanguage == Languages.Ru ? Languages.En : Languages.Ru;
-
         LanguageChanged.Invoke();
+
+        Repository.Instance.SetLanguage(CurrentLanguage);
     }
 
     public string GetTranslate(string word)

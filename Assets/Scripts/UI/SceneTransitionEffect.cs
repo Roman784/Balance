@@ -21,7 +21,7 @@ public class SceneTransitionEffect : MonoBehaviour
 
     public float PlayDisapperanceAnimation ()
     {
-        _animator.SetTrigger("Disapperance");
+        _animator.SetTrigger("Disappearance");
 
         return _disappearanceClip.length;
     }

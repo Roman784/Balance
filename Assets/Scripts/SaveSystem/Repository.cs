@@ -33,14 +33,10 @@ public class Repository : MonoBehaviour
         #else*/
             _savePath = Path.Combine (Application.dataPath, _saveFileName);
         //#endif 
-
-        LoadData();
     }
 
-    private IEnumerator Start()
+    private void Start()
     {
-        yield return new WaitForSeconds(1f);
-
         LoadData();
     }
 
@@ -73,7 +69,7 @@ public class Repository : MonoBehaviour
         DataLoaded.Invoke();
     }
 
-    private void ResetlData()
+    public void ResetlData()
     {
         _gameData = _defaultData;
         SaveData();
