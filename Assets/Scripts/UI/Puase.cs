@@ -6,6 +6,7 @@ using UnityEngine;
 public class Puase : MonoBehaviour
 {
     [SerializeField] private LevelMenu _menu;
+    private bool _isPause;
 
     private Animator _animator;
 
@@ -14,9 +15,19 @@ public class Puase : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space))
+        {
+            if (_isPause) ContinueGame();
+            else PauseGame();
+        }
+    }
+
     public void PauseGame()
     {
         Time.timeScale = 0f;
+        _isPause = true;
 
         _animator.SetTrigger("Pause");
     }
@@ -24,6 +35,7 @@ public class Puase : MonoBehaviour
     public void ContinueGame()
     {
         Time.timeScale = 1f;
+        _isPause = false;
 
         _animator.SetTrigger("Continue");
     }
