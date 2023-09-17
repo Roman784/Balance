@@ -17,6 +17,7 @@ public class MainMenu : Menu
         {
             LevelButton spawnedButton = Instantiate(_levelButtonPrefab);
             spawnedButton.transform.SetParent(_levelsGridContent);
+            spawnedButton.transform.localScale = new Vector3(1f, 1f, 1f);
 
             int levelNumber = i + 1;
 
