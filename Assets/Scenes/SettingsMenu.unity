@@ -431,6 +431,7 @@ GameObject:
   - component: {fileID: 159982970}
   - component: {fileID: 159982969}
   - component: {fileID: 159982971}
+  - component: {fileID: 159982972}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -567,6 +568,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transparency: 0.75
+--- !u!114 &159982972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159982967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d07c9ff7f41fe64e90d1be22faf6d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _en: Clear all data
+  _ru: "\u041E\u0447\u0438\u0441\u0442\u0438\u0442\u044C \u0434\u0430\u043D\u043D\u044B\u0435"
 --- !u!1 &520476545
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +728,7 @@ GameObject:
   - component: {fileID: 746822890}
   - component: {fileID: 746822889}
   - component: {fileID: 746822891}
+  - component: {fileID: 746822892}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -849,6 +865,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transparency: 0.75
+--- !u!114 &746822892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746822887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d07c9ff7f41fe64e90d1be22faf6d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _en: 'Sound:'
+  _ru: "\u0417\u0432\u0443\u043A:"
 --- !u!1 &804403566
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,17 +1027,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6646970967699024994, guid: 200993e1c0548574eb41607956da690e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1096679408}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 200993e1c0548574eb41607956da690e, type: 3}
---- !u!4 &815381832 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6646970967699024994, guid: 200993e1c0548574eb41607956da690e, type: 3}
-  m_PrefabInstance: {fileID: 815381831}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &930039323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,50 +1256,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1096679407
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1096679408}
-  - component: {fileID: 1096679409}
-  m_Layer: 0
-  m_Name: SoundAndMusic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1096679408
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096679407}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 815381832}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1096679409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096679407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 835d89694a927584da64aef3a5dbdf4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1150911541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1508,7 @@ GameObject:
   - component: {fileID: 1402664411}
   - component: {fileID: 1402664410}
   - component: {fileID: 1402664412}
+  - component: {fileID: 1402664413}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -1666,6 +1645,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transparency: 0.75
+--- !u!114 &1402664413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402664408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d07c9ff7f41fe64e90d1be22faf6d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _en: 'Language:'
+  _ru: "\u042F\u0437\u044B\u043A:"
 --- !u!1 &1475725293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,6 +1894,7 @@ MonoBehaviour:
   _levels: {fileID: 11400000, guid: bafa56f3c3d9d8642bb8ece9651bee27, type: 2}
   _soundValueText: {fileID: 520476547}
   _musicValueText: {fileID: 1150911543}
+  _languageValueText: {fileID: 43867349}
   _clearDataConfirm: {fileID: 1475725293}
 --- !u!1 &1828049980
 GameObject:
@@ -2006,6 +2000,7 @@ GameObject:
   - component: {fileID: 1935239328}
   - component: {fileID: 1935239327}
   - component: {fileID: 1935239329}
+  - component: {fileID: 1935239330}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -2142,6 +2137,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transparency: 0.75
+--- !u!114 &1935239330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935239325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d07c9ff7f41fe64e90d1be22faf6d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _en: Are you sure?
+  _ru: "\u0412\u044B \u0443\u0432\u0435\u0440\u0435\u043D\u044B?"
 --- !u!1 &2082679980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,6 +2163,7 @@ GameObject:
   - component: {fileID: 2082679983}
   - component: {fileID: 2082679982}
   - component: {fileID: 2082679984}
+  - component: {fileID: 2082679985}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -2290,6 +2300,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transparency: 0.75
+--- !u!114 &2082679985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082679980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d07c9ff7f41fe64e90d1be22faf6d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _en: 'Music:'
+  _ru: "\u041C\u0443\u0437\u044B\u043A\u0430:"
 --- !u!1 &2139323519
 GameObject:
   m_ObjectHideFlags: 0

@@ -620,6 +620,7 @@ GameObject:
   - component: {fileID: 1352730698}
   - component: {fileID: 1352730700}
   - component: {fileID: 1352730699}
+  - component: {fileID: 1352730701}
   m_Layer: 0
   m_Name: TitleText
   m_TagString: Untagged
@@ -743,6 +744,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352730697}
   m_CullTransparentMesh: 1
+--- !u!114 &1352730701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352730697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d07c9ff7f41fe64e90d1be22faf6d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _en: Balance 3D
+  _ru: "\u0411\u0430\u043B\u0430\u043D\u0441 3D"
 --- !u!1 &1382557128
 GameObject:
   m_ObjectHideFlags: 0

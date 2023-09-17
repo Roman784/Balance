@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 598584326141598600}
   - component: {fileID: 7897068712435535624}
   - component: {fileID: 8187638796112871823}
+  - component: {fileID: 6909074833142780762}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -327,6 +328,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transparency: 0.75
+--- !u!114 &6909074833142780762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3164875641884239695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d07c9ff7f41fe64e90d1be22faf6d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _en: Menu
+  _ru: "\u041C\u0435\u043D\u044E"
 --- !u!1 &4948447961770898815
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,6 +353,7 @@ GameObject:
   - component: {fileID: 524969200601920601}
   - component: {fileID: 8698651392436823294}
   - component: {fileID: 5810781643229850223}
+  - component: {fileID: 3532768072207970571}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -461,6 +477,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3532768072207970571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4948447961770898815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d07c9ff7f41fe64e90d1be22faf6d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _en: Pause
+  _ru: "\u041F\u0430\u0443\u0437\u0430"
 --- !u!1 &6929149617761276854
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +606,7 @@ GameObject:
   - component: {fileID: 4433531805385192534}
   - component: {fileID: 8486333599285806010}
   - component: {fileID: 5462689091022241984}
+  - component: {fileID: 3158545677498941807}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -768,6 +799,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transparency: 0.75
+--- !u!114 &3158545677498941807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7415267179459566209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d07c9ff7f41fe64e90d1be22faf6d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _en: Continue
+  _ru: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
 --- !u!1 &7709756418334018573
 GameObject:
   m_ObjectHideFlags: 0
