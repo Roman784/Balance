@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Levels
   m_EditorClassIdentifier: 
   Names:
-  - TestScene
   - Level1
   - Level2
   - Level3

@@ -1,9 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelMenu : Menu
 {
+    private int _currentLevelIndex;
+
+    private void Awake()
+    {
+        _currentLevelIndex = _levels.Names.IndexOf(SceneManager.GetActiveScene().name);
+    }
+
     private void Start()
     {
         Finish.PlayerDetected.AddListener(GoToNextLevel);

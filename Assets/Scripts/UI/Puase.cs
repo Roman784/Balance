@@ -42,6 +42,7 @@ public class Puase : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        Time.timeScale = 1f;
         _menu.GoToMainMenu();
     }
 }

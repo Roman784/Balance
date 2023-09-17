@@ -144,7 +144,7 @@ TextureImporter:
         width: 140
         height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,6 +152,69 @@ TextureImporter:
       bones: []
       spriteID: 03bf933bd2e681342a0b83a136acea7c
       internalID: -1559665348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UISprites_1
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 10
+        width: 245
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85906335cbf00c542bbc12ccedb444bd
+      internalID: -494027440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UISprites_2
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 10
+        width: 245
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f33348a8ac3f4c4182a7351df9975f2
+      internalID: 2094751426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UISprites_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 157
+        width: 147
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f248762c149ff44a1041b2b21fc407
+      internalID: 902432564
       vertices: []
       indices: 
       edges: []
@@ -168,6 +231,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       UISprites_0: -2084977635
+      UISprites_1: -494027440
+      UISprites_2: 2094751426
+      UISprites_3: 902432564
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
