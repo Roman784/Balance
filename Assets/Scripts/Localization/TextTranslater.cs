@@ -18,5 +18,10 @@ public class TextTranslater : MonoBehaviour
         Language.LanguageChanged.AddListener(UpdateText);
     }
 
+    private void Start()
+    {
+        if (Language.Instance != null) UpdateText();
+    }
+
     private void UpdateText() => _text.text = Language.Instance.CurrentLanguage == Languages.Ru ? _ru : _en;
 }
