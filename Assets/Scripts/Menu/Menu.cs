@@ -15,6 +15,15 @@ public class Menu : MonoBehaviour
 
     protected void OpenScene(string name)
     {
-        SceneManager.LoadScene(name);
+        // Проигрываем анимацию перехода и открываем нужную сцену.
+        float delay = SceneTransitionEffect.Instance.PlayDisapperanceAnimation();
+        StartCoroutine(OpenSceneWithDelay(name, delay));
+    }
+
+    private IEnumerator OpenSceneWithDelay(string sceneName, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        SceneManager.LoadScene(sceneName);
     }
 }
