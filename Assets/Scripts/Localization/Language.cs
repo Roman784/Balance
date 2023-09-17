@@ -19,9 +19,16 @@ public class Language : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        Repository.DataLoaded.AddListener(LoadData);
+    }
+
     public void LoadData()
     {
+        CurrentLanguage = Repository.Instance.GameData.Language;
 
+        LanguageChanged.Invoke();
     }
 
     public void ChangeLanguage()

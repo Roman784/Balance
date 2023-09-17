@@ -26,29 +26,15 @@ public class SettingsMenu : Menu
         _soundAndMusic = SoundAndMusic.Instance;
         _language = Language.Instance;
 
-        UpdateDisplay();
+        Language.LanguageChanged.AddListener(UpdateDisplay);
+        SoundAndMusic.SoundOrMusicChanged.AddListener(UpdateDisplay);
     }
 
-    public void ChangeSound()
-    {
-        _soundAndMusic.ChangeSound();
+    public void ChangeSound() => _soundAndMusic.ChangeSound();
 
-        UpdateDisplay();
-    }
+    public void CahngeMusic() => _soundAndMusic.ChangeMusic();
 
-    public void CahngeMusic()
-    {
-        _soundAndMusic.ChangeMusic();
-
-        UpdateDisplay();
-    }
-
-    public void ChangeLanguage()
-    {
-        _language.ChangeLanguage();
-
-        UpdateDisplay();
-    }
+    public void ChangeLanguage() => _language.ChangeLanguage();
 
     public void ClearData()
     {
