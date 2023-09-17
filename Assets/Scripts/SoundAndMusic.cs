@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class SoundAndMusic : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static SoundAndMusic Instance;
+
+    public float SoundVolume { get; private set; }
+    public float MusciVolume { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this) Destroy(gameObject);
+        Instance = this;
+    }
+
+    private void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadData()
     {
-        
+
     }
+
+    public void ChangeSound()
+    {
+        SoundVolume = SoundVolume > 0f ? 0f : 1f;
+    }
+
+    public void ChangeMusic()
+    {
+        MusciVolume = MusciVolume > 0f ? 0f : 1f;
+    }    
 }
