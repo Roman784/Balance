@@ -10,7 +10,10 @@ public class DeathZone : MonoBehaviour
     public void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
-            PlayerDetected.Invoke();
+        {
+            SoundPlayer.Instance.Play("GameOver");
 
+            PlayerDetected.Invoke();
+        }
     }
 }

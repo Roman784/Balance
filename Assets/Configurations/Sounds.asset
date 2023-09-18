@@ -17,3 +17,5 @@ MonoBehaviour:
     Clip: {fileID: 0}
   - Name: FinishReached
     Clip: {fileID: 8300000, guid: 1b6ba74598cfdb7409c03af7bdd50490, type: 3}
+  - Name: GameOver
+    Clip: {fileID: 8300000, guid: bec83fe4da45ee148b202f60d0f9e613, type: 3}
