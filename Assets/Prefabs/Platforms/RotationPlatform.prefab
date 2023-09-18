@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4679460210698693275, guid: e4caf3a27e7423d41aa63bd9ba94ba3e, type: 3}
       propertyPath: m_Name
-      value: OrangePlatform Variant
+      value: RotationPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 8677339001647883578, guid: e4caf3a27e7423d41aa63bd9ba94ba3e, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -67,5 +67,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4679460210698693275, guid: e4caf3a27e7423d41aa63bd9ba94ba3e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2754405787608023501}
   m_SourcePrefab: {fileID: 100100000, guid: e4caf3a27e7423d41aa63bd9ba94ba3e, type: 3}
+--- !u!1 &355883100950806337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4679460210698693275, guid: e4caf3a27e7423d41aa63bd9ba94ba3e, type: 3}
+  m_PrefabInstance: {fileID: 4900076441082369498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2754405787608023501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355883100950806337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c93eafcf305344c8377cd20b04196a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 150
+  _direction: {x: -1, y: 0, z: 0}
+  _pauseDuration: 0.5

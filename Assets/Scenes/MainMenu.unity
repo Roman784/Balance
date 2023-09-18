@@ -804,7 +804,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levels: {fileID: 11400000, guid: bafa56f3c3d9d8642bb8ece9651bee27, type: 2}
-  _lastOpenLevel: 1
   _levelButtonPrefab: {fileID: 5647253545820755043, guid: a96fee413b6bfdd409b3ede5ea1ff86f, type: 3}
   _levelsGridContent: {fileID: 269777716}
 --- !u!1 &1383691273
