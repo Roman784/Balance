@@ -28,11 +28,8 @@ public class Repository : MonoBehaviour
         if (Instance != null && Instance != this) Destroy(gameObject);
         Instance = this;
 
-        /*#if UNITY_ANDROID && !UNITY_EDITOR
-            _savePath = Path.Combine (Application.persistentDataPath, _saveFileName);
-        #else*/
-            _savePath = Path.Combine (Application.dataPath, _saveFileName);
-        //#endif 
+        if (CurrentDevicePlatform.Get() == DevicePlatforms.Android) _savePath = Path.Combine(Application.persistentDataPath, _saveFileName);
+        else _savePath = Path.Combine(Application.dataPath, _saveFileName);
     }
 
     private void Start()
