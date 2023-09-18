@@ -49,4 +49,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         _movementVector = Vector3.Lerp(_movementVector, direction * _speed * Time.fixedDeltaTime, _accelirationForce * Time.deltaTime);
     }
+
+    public bool IsMove() => (Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f);
 }
