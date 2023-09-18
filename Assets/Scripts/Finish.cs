@@ -10,6 +10,10 @@ public class Finish : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
+        {
+            SoundPlayer.Instance.Play("FinishReached");
+
             PlayerDetected.Invoke();
+        }
     }
 }

@@ -11,7 +11,7 @@ public class SoundPlayer : MonoBehaviour
 
     [Space]
 
-    [SerializeField] private AudioSource _soundPrefab;
+    [SerializeField] private SoundObject _soundPrefab;
 
     private void Awake()
     {
@@ -25,13 +25,12 @@ public class SoundPlayer : MonoBehaviour
         {
             if (sound.Name == name)
             {
-                AudioSource spawnedSound = Instantiate(_soundPrefab);
+                SoundObject spawnedSound = Instantiate(_soundPrefab);
 
-                spawnedSound.volume = Repository.Instance.GameData.SoundVolume;
-                spawnedSound.clip = sound.Clip;
-                spawnedSound.Play();
+                float volume = Repository.Instance.GameData.SoundVolume;
+                AudioClip clip = sound.Clip;
 
-                Destroy(spawnedSound.gameObject, sound.Clip.length);
+                spawnedSound.Setup(volume, clip);
 
                 return;
             }

@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoundList:
   - Name: ButtonClick
-    Object: {fileID: 5232021020313933249, guid: df53b24df0337cd4d86e00d13df87093, type: 3}
+    Clip: {fileID: 0}
+  - Name: FinishReached
+    Clip: {fileID: 8300000, guid: 1b6ba74598cfdb7409c03af7bdd50490, type: 3}
