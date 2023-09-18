@@ -92,4 +92,12 @@ public class Repository : MonoBehaviour
         _gameData.Language = value;
         SaveData();
     }
+
+    public void SetLastPassedLevel(int value)
+    {
+        if (value <= _gameData.LastPassedLevel) return;
+
+        _gameData.LastPassedLevel = value;
+        SaveData();
+    }
 }

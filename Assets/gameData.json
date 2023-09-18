@@ -1,6 +1,6 @@
 {
-    "SoundVolume": 1.0,
+    "SoundVolume": 0.0,
     "MusicVolume": 1.0,
-    "Language": 0,
-    "LastPassedLevel": 0
+    "Language": 1,
+    "LastPassedLevel": 4
 }

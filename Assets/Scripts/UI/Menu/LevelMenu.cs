@@ -10,24 +10,24 @@ public class LevelMenu : Menu
     private void Awake()
     {
         _currentLevelIndex = _levels.Names.IndexOf(SceneManager.GetActiveScene().name);
-    }
 
-    private void Start()
-    {
         Finish.PlayerDetected.AddListener(GoToNextLevel);
         DeathZone.PlayerDetected.AddListener(RestartLevel);
     }
 
     private void GoToNextLevel()
     {
+        Repository.Instance.SetLastPassedLevel(_currentLevelIndex + 1);
+
         _currentLevelIndex += 1;
-        if (_currentLevelIndex >= _levels.Names.Count) _currentLevelIndex = 0;
+        if (_currentLevelIndex >= _levels.Names.Count)
+        {
+            GoToMainMenu();
+            return;
+        }
 
         OpenScene(_levels.Names[_currentLevelIndex]);
     }
 
-    private void RestartLevel ()
-    {
-        OpenScene(_levels.Names[_currentLevelIndex]);
-    }    
+    private void RestartLevel () => OpenScene(_levels.Names[_currentLevelIndex]);  
 }
