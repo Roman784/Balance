@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a368d620d14fa4f8df5ce0c582649c, type: 3}
   m_Name: Sounds
   m_EditorClassIdentifier: 
-  _sounds:
+  SoundList:
   - Name: ButtonClick
     Object: {fileID: 5232021020313933249, guid: df53b24df0337cd4d86e00d13df87093, type: 3}

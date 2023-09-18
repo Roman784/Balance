@@ -12,5 +12,5 @@ public class Sounds : ScriptableObject
 public struct Sound
 {
     public string Name;
-    public GameObject Object;
+    public AudioClip Clip;
 }

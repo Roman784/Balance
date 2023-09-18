@@ -9,6 +9,10 @@ public class SoundPlayer : MonoBehaviour
 
     [SerializeField] private Sounds _sounds;
 
+    [Space]
+
+    [SerializeField] private AudioSource _soundPrefab;
+
     private void Awake()
     {
         if (Instance != null && Instance != this) Destroy(gameObject);
@@ -21,7 +25,13 @@ public class SoundPlayer : MonoBehaviour
         {
             if (sound.Name == name)
             {
-                Instantiate(sound.Object);
+                AudioSource spawnedSound = Instantiate(_soundPrefab);
+
+                spawnedSound.volume = Repository.Instance.GameData.SoundVolume;
+                spawnedSound.clip = sound.Clip;
+                spawnedSound.Play();
+
+                Destroy(spawnedSound.gameObject, sound.Clip.length);
 
                 return;
             }
