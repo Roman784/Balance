@@ -7,27 +7,25 @@ public class BackgroundMusicPlayer : MonoBehaviour
 {
     public static BackgroundMusicPlayer Instance { get; private set; }
 
-    [SerializeField] private AudioClip _clip;
-
     private AudioSource _audioSource;
 
     private void Awake()
     {
-        if (Instance != null && Instance != this) Destroy(gameObject);
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
 
         DontDestroyOnLoad(gameObject);
 
         _audioSource = GetComponent<AudioSource>();
-        _audioSource.clip = _clip;
-        Play();
-
-        Repository.DataLoaded.AddListener(loadData);
     }
 
-    private void loadData()
+    public void SetVolume(float volume)
     {
-        _audioSource.volume = Repository.Instance.GameData.MusicVolume;
+        _audioSource.volume = volume;
     }
 
     public void Pause() => _audioSource.Pause();

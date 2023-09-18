@@ -18,6 +18,7 @@ public class SoundAndMusic : MonoBehaviour
         Instance = this;
 
         Repository.DataLoaded.AddListener(LoadData);
+        SoundOrMusicChanged.AddListener(UpdateMusicPlayerVolume);
     }
 
     public void LoadData()
@@ -43,4 +44,6 @@ public class SoundAndMusic : MonoBehaviour
 
         Repository.Instance.SetMusicVolume(MusciVolume);
     }    
+
+    private void UpdateMusicPlayerVolume() => BackgroundMusicPlayer.Instance.SetVolume(MusciVolume);
 }
