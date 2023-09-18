@@ -18,7 +18,7 @@ public class PlayerSound : MonoBehaviour
 
     private void Update()
     {
-        if (_movement.IsMove()) _audioSource.enabled = true;
+        if (_movement.IsMoving()) _audioSource.enabled = true;
         else _audioSource.enabled = false;
     }
 

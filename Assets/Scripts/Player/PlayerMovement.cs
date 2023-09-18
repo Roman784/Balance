@@ -12,6 +12,12 @@ public class PlayerMovement : MonoBehaviour
 
     [Space]
 
+    [SerializeField] private ComputerControl _computerControl;
+    [SerializeField] private MobileControl _mobileControl;
+    private MovementControl _currentControl;
+
+    [Space]
+
     [SerializeField] private float _gravity;
 
     private Rigidbody _rigidbody;
@@ -24,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         Physics.gravity = new Vector3(0f, -_gravity, 0f);
+
+        if (CurrentDevicePlatform.Get() == DevicePlatforms.Android) _currentControl = _mobileControl;
+        else _currentControl = _computerControl;
     }
 
     private void Update()
@@ -46,9 +55,8 @@ public class PlayerMovement : MonoBehaviour
     // Необходим для эффекта ускорения, торможения и заносов.
     private void NormalizeMovementVector()
     {
-        Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-        _movementVector = Vector3.Lerp(_movementVector, direction * _speed * Time.fixedDeltaTime, _accelirationForce * Time.deltaTime);
+        _movementVector = Vector3.Lerp(_movementVector, _currentControl.GetDirection() * _speed * Time.fixedDeltaTime, _accelirationForce * Time.deltaTime);
     }
 
-    public bool IsMove() => (Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f);
+    public bool IsMoving() => _currentControl.IsMoving();
 }
