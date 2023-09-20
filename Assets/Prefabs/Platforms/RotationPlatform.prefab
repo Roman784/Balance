@@ -89,6 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c93eafcf305344c8377cd20b04196a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 150
+  _speed: 200
   _direction: {x: -1, y: 0, z: 0}
   _pauseDuration: 0.5
