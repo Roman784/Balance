@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
-  _offset: {x: 0, y: -2, z: 0}
+  _offset: {x: 0, y: -1.5, z: 0}
   _followingSpeed: 4
   _height: 15
   _rearDistance: 12
@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 2961365591442688151}
   - component: {fileID: 8307234228155717765}
   - component: {fileID: 4419292176481847516}
+  - component: {fileID: 3292938856015825840}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -333,3 +334,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6750291942391518862}
   m_Enabled: 1
+--- !u!114 &3292938856015825840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750291942391518862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa30e7ace9c67842823ffdffeb2482f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resolution: {x: 1440, y: 3216}
+  _baseSize: 10
+  _minSize: 5
