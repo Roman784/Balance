@@ -25,51 +25,67 @@ public class Repository : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this) Destroy(gameObject);
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
+
+        DontDestroyOnLoad(gameObject);
 
         if (CurrentDevicePlatform.Get() == DevicePlatforms.Android) _savePath = Path.Combine(Application.persistentDataPath, _saveFileName);
         else _savePath = Path.Combine(Application.dataPath, _saveFileName);
     }
 
-    private void Start()
+    /*private void Start()
     {
         LoadData();
-    }
+    }*/
 
     private void SaveData()
     {
         try
         {
-            string json = JsonUtility.ToJson(_gameData, true);
-            File.WriteAllText(_savePath, json);
+            string json = JsonUtility.ToJson(GameData, true);
+            Yandex.Instance.SaveData(json);
+
+            Debug.Log("Save data complete");
         }
         catch { Debug.Log("Save data error"); }
     }
 
-    private void LoadData()
+    public void LoadData(string data)
     {
-        if (!File.Exists(_savePath))
+        try
         {
-            ResetlData();
-        }
-        else
-        {
-            try
+            GameData = JsonUtility.FromJson<GameData>(data);
+
+            if (data == "{}")
             {
-                string json = File.ReadAllText(_savePath);
-                _gameData = JsonUtility.FromJson<GameData>(json);
+                DefaultData();
+                Debug.Log("Starting data");
             }
-            catch { Debug.Log("Load data error"); }
+
+            Debug.Log("Load data complete");
         }
+        catch { Debug.Log("Load data error"); }
 
         DataLoaded.Invoke();
     }
 
     public void ResetlData()
     {
-        _gameData = _defaultData;
+        DefaultData();
         SaveData();
+    }
+
+    private void DefaultData()
+    {
+        GameData.SoundVolume = _defaultData.SoundVolume;
+        GameData.MusicVolume = _defaultData.MusicVolume;
+        GameData.Language = _defaultData.Language;
+        GameData.LastPassedLevel = _defaultData.LastPassedLevel;
     }
 
     public void SetSoundVolume(float value)

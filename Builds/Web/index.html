@@ -24,15 +24,52 @@
   </div>
 
   <script>
-    YaGames
-    .init()
-    .then(ysdk => {
+    var player;
+    var myGameInstance = null;
+
+    function initSDK ()
+    {
+      YaGames
+      .init()
+      .then(ysdk => {
         console.log('Yandex SDK initialized');
         window.ysdk = ysdk;
-    });
-  </script>
 
-  <script>
+        auth ();
+      });
+    }
+
+    function initPlayer() {
+      return ysdk.getPlayer({ scopes: false }).then(_player => {
+        player = _player;
+        console.log ("player init");
+
+        return player;
+      });
+    }
+
+    function auth ()
+    {
+      initPlayer().then(_player => {
+        console.log ("auth complete");
+              myGameInstance.SendMessage('StartAuth', 'GoToBootstrap');
+              // if (_player.getMode() === 'lite') {
+              //     // Игрок не авторизован.
+              //     // ysdk.auth.openAuthDialog().then(() => {
+              //     //         // Игрок успешно авторизован
+              //     //         initPlayer().catch(err => {
+              //     //             // Ошибка при инициализации объекта Player.
+              //     //         });
+              //     //     }).catch(() => {
+              //     //         // Игрок не авторизован.
+              //     //     });
+              // }
+      }).catch(err => {
+        console.log ("player auth error");
+              // Ошибка при инициализации объекта Player.
+      });
+    }
+
     var container = document.querySelector("#unity-container");
     var canvas = document.querySelector("#unity-canvas");
     var loadingBar = document.querySelector("#unity-loading-bar");
@@ -114,6 +151,9 @@
       createUnityInstance(canvas, config, (progress) => {
         progressBarFull.style.width = 100 * progress + "%";
       }).then((unityInstance) => {
+
+        myGameInstance = unityInstance;
+
         loadingBar.style.display = "none";
         // fullscreenButton.onclick = () => {
         //   unityInstance.SetFullscreen(1);
