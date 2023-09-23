@@ -7,14 +7,12 @@ mergeInto(LibraryManager.library, {
     SaveExtern: function(date){
         var dateString = UTF8ToString(date);
         var myobj = JSON.parse(dateString);
-        console.log(myobj);
         player.setData(myobj);
     },
 
     LoadExtern: function(){
         player.getData().then(_date => {
             const myJSON = JSON.stringify(_date);
-            console.log(myJSON);
             myGameInstance.SendMessage('Yandex', 'LoadData', myJSON);
         });
     },
@@ -54,16 +52,20 @@ mergeInto(LibraryManager.library, {
         ysdk.adv.showRewardedVideo({
             callbacks: {
                 onOpen: () => {
-                  console.log('Video ad open.');
+                    myGameInstance.SendMessage('Yandex', 'AudioVolumeOff');
+                    console.log('Video ad open.');
                 },
                 onRewarded: () => {
-                  console.log('Rewarded!');
+                    myGameInstance.SendMessage('Yandex', 'OnRewarded');
+                    console.log('Rewarded!');
                 },
                 onClose: () => {
-                  console.log('Video ad closed.');
+                    myGameInstance.SendMessage('Yandex', 'AudioVolumeOn');
+                    console.log('Video ad closed.');
                 }, 
                 onError: (e) => {
-                  console.log('Error while open video ad:', e);
+                    myGameInstance.SendMessage('Yandex', 'AudioVolumeOn');
+                    console.log('Error while open video ad:', e);
                 }
             }
         })

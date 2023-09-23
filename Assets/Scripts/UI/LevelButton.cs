@@ -10,14 +10,19 @@ public class LevelButton : MonoBehaviour
 
     [Space]
 
+    [SerializeField] private GameObject _video;
     [SerializeField] private GameObject _lock;
     private bool _isLock;
+    private bool _isAllowOpeningForVideo;
 
     private MainMenu _menu;
 
     private void Awake()
     {
         _isLock = true;
+        _isAllowOpeningForVideo = false;
+
+        _video.SetActive(false);
     }
 
     public void Setup(MainMenu menu, int number)
@@ -30,14 +35,29 @@ public class LevelButton : MonoBehaviour
 
     public void Unlock()
     {
+        _isAllowOpeningForVideo = false;
         _isLock = false;
         _lock.SetActive(false);
+        _video.SetActive(false);
     }
 
     public void OnClick()
     {
+        if (_isAllowOpeningForVideo)
+        {
+            Yandex.Instance.ShowRewardedVideo();
+            return;
+        }
+
         if (_isLock) return;
 
         _menu.GoToLevel(_number);
+    }
+
+    public void AllowOpeningForVideo()
+    {
+        _isAllowOpeningForVideo = true;
+        _lock.SetActive(false);
+        _video.SetActive(true);
     }
 }

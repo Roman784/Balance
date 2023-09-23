@@ -113,4 +113,10 @@ public class Repository : MonoBehaviour
         _gameData.LastPassedLevel = value;
         SaveData();
     }
+
+    public void OpenNextLevel()
+    {
+        GameData.LastPassedLevel += 1;
+        SaveData();
+    }
 }

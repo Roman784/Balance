@@ -54,6 +54,7 @@ public class Yandex : MonoBehaviour
     public void ShowFullscreenAdv() => ShowFullscreenAdvExtern();
 
     public void ShowRewardedVideo() => ShowRewardedVideoExtern();
+    public void OnRewarded() => FindObjectOfType<MainMenu>().OpenNextLevel();
 
     public void AudioVolumeOff() => AudioListener.volume = 0f;
     public void AudioVolumeOn() => AudioListener.volume = 1f;
