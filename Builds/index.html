@@ -34,6 +34,7 @@
       .then(ysdk => {
         console.log('Yandex SDK initialized');
         window.ysdk = ysdk;
+        ysdk.adv.showFullscreenAdv();
 
         auth ();
       });

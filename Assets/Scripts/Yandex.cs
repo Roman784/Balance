@@ -11,6 +11,8 @@ public class Yandex : MonoBehaviour
     [DllImport("__Internal")] private static extern void SaveExtern(string date);
     [DllImport("__Internal")] private static extern void LoadExtern();
     [DllImport("__Internal")] private static extern string GetLangExtern();
+    [DllImport("__Internal")] private static extern void ShowFullscreenAdvExtern();
+    [DllImport("__Internal")] private static extern void ShowRewardedVideoExtern();
 
     private void Awake()
     {
@@ -48,4 +50,11 @@ public class Yandex : MonoBehaviour
         if (lang == "ru") return Languages.Ru;
         return Languages.En;
     }
+
+    public void ShowFullscreenAdv() => ShowFullscreenAdvExtern();
+
+    public void ShowRewardedVideo() => ShowRewardedVideoExtern();
+
+    public void AudioVolumeOff() => AudioListener.volume = 0f;
+    public void AudioVolumeOn() => AudioListener.volume = 1f;
 }

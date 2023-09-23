@@ -21,5 +21,7 @@ public class Common : MonoBehaviour
     private void Start()
     {
         Repository.DataLoaded.Invoke();
+
+        Yandex.Instance.ShowFullscreenAdv();
     }
 }
