@@ -84,7 +84,7 @@ public class Repository : MonoBehaviour
     {
         GameData.SoundVolume = _defaultData.SoundVolume;
         GameData.MusicVolume = _defaultData.MusicVolume;
-        GameData.Language = _defaultData.Language;
+        GameData.Language = Yandex.Instance.GetLang();
         GameData.LastPassedLevel = _defaultData.LastPassedLevel;
     }
 

@@ -10,6 +10,7 @@ public class Yandex : MonoBehaviour
 
     [DllImport("__Internal")] private static extern void SaveExtern(string date);
     [DllImport("__Internal")] private static extern void LoadExtern();
+    [DllImport("__Internal")] private static extern string GetLangExtern();
 
     private void Awake()
     {
@@ -38,5 +39,13 @@ public class Yandex : MonoBehaviour
     public void SaveData(string data)
     {
         SaveExtern(data);
+    }
+
+    public Languages GetLang()
+    {
+        string lang = GetLangExtern();
+
+        if (lang == "ru") return Languages.Ru;
+        return Languages.En;
     }
 }
