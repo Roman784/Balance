@@ -756,8 +756,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d07c9ff7f41fe64e90d1be22faf6d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: Balance 3D
-  _ru: "\u0411\u0430\u043B\u0430\u043D\u0441 3D"
+  _en: Balance3D
+  _ru: "\u0411\u0430\u043B\u0430\u043D\u04413D"
 --- !u!1 &1382557128
 GameObject:
   m_ObjectHideFlags: 0
