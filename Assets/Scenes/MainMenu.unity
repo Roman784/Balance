@@ -667,7 +667,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: zBALAnce
+  m_text: Zebalance
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11782c9fdf78f3b4cbe3088d3bcda7ca, type: 2}
   m_sharedMaterial: {fileID: -4277743591588801738, guid: 11782c9fdf78f3b4cbe3088d3bcda7ca, type: 2}
@@ -756,8 +756,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d07c9ff7f41fe64e90d1be22faf6d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _en: ZBalance
-  _ru: "Z\u0411\u0430\u043B\u0430\u043D\u0441"
+  _en: Zebalance
+  _ru: Zebalance
 --- !u!1 &1382557128
 GameObject:
   m_ObjectHideFlags: 0
