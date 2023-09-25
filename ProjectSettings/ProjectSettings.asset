@@ -16,7 +16,7 @@ PlayerSettings:
   productName: Balance
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.003921569, g: 0.9607844, b: 0.8313726, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0, g: 1, b: 1, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 0.5

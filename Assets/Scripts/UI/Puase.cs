@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class Puase : MonoBehaviour
 {
+    public static Puase Instance;
+
     [SerializeField] private LevelMenu _menu;
     private bool _isPause;
 
@@ -12,6 +14,9 @@ public class Puase : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this) Destroy(gameObject);
+        Instance = this;
+
         _animator = GetComponent<Animator>();
     }
 

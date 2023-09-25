@@ -56,6 +56,16 @@ public class Yandex : MonoBehaviour
     public void ShowRewardedVideo() => ShowRewardedVideoExtern();
     public void OnRewarded() => FindObjectOfType<MainMenu>().OpenNextLevel();
 
-    public void AudioVolumeOff() => AudioListener.volume = 0f;
-    public void AudioVolumeOn() => AudioListener.volume = 1f;
+    public void AudioVolumeOff()
+    {
+        AudioListener.volume = 0f;
+        Time.timeScale = 0f;
+        //Puase.Instance?.PauseGame();
+    }
+    public void AudioVolumeOn()
+    {
+        AudioListener.volume = 1f;
+        Time.timeScale = 1f;
+        // Puase.Instance?.ContinueGame();
+    }
 }
