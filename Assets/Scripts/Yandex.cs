@@ -14,6 +14,8 @@ public class Yandex : MonoBehaviour
     [DllImport("__Internal")] private static extern void ShowFullscreenAdvExtern();
     [DllImport("__Internal")] private static extern void ShowRewardedVideoExtern();
 
+    public bool IsAdOpen;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -28,6 +30,7 @@ public class Yandex : MonoBehaviour
 
     private void Start()
     {
+        ShowFullscreenAdv();
         LoadExtern();
     }
 
@@ -51,19 +54,34 @@ public class Yandex : MonoBehaviour
         return Languages.En;
     }
 
-    public void ShowFullscreenAdv() => ShowFullscreenAdvExtern();
+    public void ShowFullscreenAdv()
+    {
+        if (IsAdOpen) return;
 
-    public void ShowRewardedVideo() => ShowRewardedVideoExtern();
-    public void OnRewarded() => FindObjectOfType<MainMenu>().OpenNextLevel();
+        ShowFullscreenAdvExtern();
+    }
+
+    public void ShowRewardedVideo()
+    {
+        if (IsAdOpen) return;
+
+        ShowRewardedVideoExtern();
+    }
+    public void OnRewarded()
+    {
+        FindObjectOfType<MainMenu>().OpenNextLevel();
+    }
 
     public void AudioVolumeOff()
     {
+        IsAdOpen = true;
         AudioListener.volume = 0f;
         Time.timeScale = 0f;
         //Puase.Instance?.PauseGame();
     }
     public void AudioVolumeOn()
     {
+        IsAdOpen = false;
         AudioListener.volume = 1f;
         Time.timeScale = 1f;
         // Puase.Instance?.ContinueGame();

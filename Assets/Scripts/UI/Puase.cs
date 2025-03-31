@@ -31,6 +31,8 @@ public class Puase : MonoBehaviour
 
     public void PauseGame()
     {
+        if (Yandex.Instance.IsAdOpen) return;
+
         AudioListener.volume = 0f;
         Time.timeScale = 0f;
         _isPause = true;
@@ -40,6 +42,8 @@ public class Puase : MonoBehaviour
 
     public void ContinueGame()
     {
+        if (Yandex.Instance.IsAdOpen) return;
+
         AudioListener.volume = 1f;
         Time.timeScale = 1f;
         _isPause = false;

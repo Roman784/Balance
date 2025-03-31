@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 470c8d36339a58f4d88d469055b4a9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 400
-  _accelirationForce: 3
+  _speed: 300
+  _accelirationForce: 8
   _computerControl: {fileID: 3553618142163977386}
   _mobileControl: {fileID: 984326637217644900}
   _gravity: 30

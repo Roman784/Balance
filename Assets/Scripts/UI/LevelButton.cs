@@ -43,7 +43,7 @@ public class LevelButton : MonoBehaviour
 
     public void OnClick()
     {
-        if (_isAllowOpeningForVideo)
+        if (_isAllowOpeningForVideo && Yandex.Instance.IsAdOpen == false)
         {
             Yandex.Instance.ShowRewardedVideo();
             return;
